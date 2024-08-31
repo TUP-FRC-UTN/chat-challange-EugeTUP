@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="card fondo border-4 h-50">
+        <div class="card-header text-center bg-secondary">
+            <b class="fs-4">CHAT</b>
+        </div>
+        <div class="card-body">
+            <b class="fs-4"></b>
+        </div>
+        <div>
+            @for (mess of messages; track $index) {
+            @if (mess.user == Users[0].name) {
+            <div class="mess-container col-6 col-md-4 bg-info-subtle shadow-lg">
+                <p><b>{{mess.user}}</b> </p>
+                <p class="fs-5">{{mess.message}}</p>
+                <p class="text-end pb-2">{{mess.date | date:'hh:mm'}}</p>
+
+            </div>
+
+            }@else{
+            <div class="d-flex justify-content-end">
+                <div class="mess-cont col-6 col-md-4 bg-secondary-subtle shadow-lg">
+                    <p class="text-end">
+                        <b>{{mess.user}}</b>
+                    </p>
+                    <p class="fs-5 text-end">{{mess.message}}</p>
+                    <p class="text-start pb-1">{{mess.date | date:'hh:mm'}} </p>
+                </div>
+            </div>
+            }
+            }
+        </div>
+    </div>
+
+
+</div>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12 col-md-6 mt-4">
+            <app-messages [user]="Users[0].name" (message)="getMessage($event)" />
+        </div>
+        <div class="col-12 col-md-6 mt-4">
+            <app-messages [user]="Users[1].name" (message)="getMessage($event)" />
+        </div>
+    </div>
+
+</div>

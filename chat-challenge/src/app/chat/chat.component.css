@@ -1,0 +1,21 @@
+.mess-container {
+    border-radius: 0px 10px 10px 10px;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.mess-cont{
+    border-radius: 10px 0px 10px 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.fondo{
+    background-image: url(https://i.pinimg.com/originals/f8/ba/d2/f8bad28b7148eb570c7ee7463cb9bd1a.jpg);
+}
+

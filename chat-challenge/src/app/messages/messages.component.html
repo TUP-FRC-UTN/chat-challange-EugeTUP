@@ -1,0 +1,12 @@
+
+
+<div class="card bg-blue text-white">
+    <div class="card-header bg-secondary fs-5 text-center">
+        User: {{user}}
+    </div>
+    <div class="card-body ">
+        <p class="fs-5">Message</p>
+        <textarea class="form-control bg-secondary border-0 text-white" placeholder="" id="floatingTextarea2" style="height: 100px" [(ngModel)]="text" ></textarea>
+        <a href="#" class="btn btn-outline-info mt-5 w-50" (click)="sendMessage()">Send</a>
+    </div>
+</div>
